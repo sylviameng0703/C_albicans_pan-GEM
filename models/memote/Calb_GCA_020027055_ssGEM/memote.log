@@ -1,0 +1,201 @@
+/home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/pandera/_pandas_deprecated.py:160: FutureWarning: Importing pandas-specific classes and functions from the
+top-level pandera module will be **removed in a future version of pandera**.
+If you're using pandera to validate pandas objects, we highly recommend updating
+your import:
+
+```
+# old import
+import pandera as pa
+
+# new import
+import pandera.pandas as pa
+```
+
+If you're using pandera to validate objects from other compatible libraries
+like pyspark or polars, see the supported libraries section of the documentation
+for more information on how to import pandera:
+
+https://pandera.readthedocs.io/en/stable/supported_libraries.html
+
+To disable this warning, set the environment variable:
+
+```
+export DISABLE_PANDERA_IMPORT_WARNING=True
+```
+
+  warnings.warn(_future_warning, FutureWarning)
+The current solver interface glpk doesn't support setting the optimality tolerance.
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests
+plugins: typeguard-4.4.4, anyio-4.10.0
+collected 236 items / 1 skipped
+
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py . [  0%]
+..FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF..FFFFFFF....F..FFF...F.FF.FFF..         [ 27%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py . [ 27%]
+...F.FF.......F...F.FF                                                   [ 37%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py . [ 37%]
+FFFFFFFFFFF............................................FFFFFFFFFFF.F..F. [ 68%]
+.F.F............FFFFFFFFFFF                                              [ 79%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py F [ 80%]
+FFFFFFF....sssssFFFFFFFF.FFF                                             [ 91%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_essentiality.py s [ 92%]
+                                                                         [ 92%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_growth.py s [ 92%]
+                                                                         [ 92%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_matrix.py . [ 93%]
+...                                                                      [ 94%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbml.py . [ 94%]
+.                                                                        [ 95%]
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py F [ 95%]
+FFFFFFFFs.                                                               [100%]
+
+=============================== warnings summary ===============================
+../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/_pytest/config/__init__.py:1290
+  /home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/_pytest/config/__init__.py:1290: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; typeguard
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+test_annotation.py::test_metabolite_id_namespace_consistency
+test_annotation.py::test_reaction_id_namespace_consistency
+  /home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/support/annotation.py:279: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    df["duplicate"].fillna(False, inplace=True)
+
+test_annotation.py::test_metabolite_id_namespace_consistency
+test_annotation.py::test_reaction_id_namespace_consistency
+  /home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/support/annotation.py:279: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+    df["duplicate"].fillna(False, inplace=True)
+
+test_biomass.py: 11 warnings
+  /home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/cobra/core/metabolite.py:191: UserWarning: The element 'R' does not appear in the periodic table
+    warn(f"The element {e} does not appear in the periodic table")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[pubchem.compound]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[kegg.compound]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[seed.compound]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[inchikey]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[inchi]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[chebi]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[hmdb]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[reactome]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[metanetx.chemical]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[bigg.metabolite]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_overview[biocyc]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[rhea]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[kegg.reaction]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[seed.reaction]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[metanetx.reaction]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[bigg.reaction]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[reactome]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[ec-code]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[brenda]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_overview[biocyc]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[refseq]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[uniprot]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[ecogene]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[kegg.genes]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[ncbigi]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[ncbigene]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[ncbiprotein]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[ccds]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[hprd]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_overview[asap]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[seed.compound]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[inchikey]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[inchi]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[chebi]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[hmdb]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[reactome]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_metabolite_annotation_wrong_ids[metanetx.chemical]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_wrong_ids[seed.reaction]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_wrong_ids[reactome]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_wrong_ids[ec-code]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_reaction_annotation_wrong_ids[brenda]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_wrong_ids[ecogene]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_wrong_ids[ncbigi]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_wrong_ids[ncbigene]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_wrong_ids[ccds]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_wrong_ids[hprd]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_annotation.py::test_gene_product_annotation_wrong_ids[asap]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_metabolites_formula_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_gene_protein_reaction_rule_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_ngam_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_transport_reaction_gpr_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_find_reactions_with_partially_identical_annotations
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_find_reactions_with_identical_genes
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_basic.py::test_find_medium_metabolites
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_biomass_irv781__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_CL_16_0_18_1_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_DG_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_MG_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_PA_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_PC_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_PE_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_PG_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_PI_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_PS_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_biomass_consistency[calb_bm_alloc_TG_16_0_18_1_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_biomass_irv781__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_CL_16_0_18_1_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_DG_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_MG_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_PA_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_PC_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_PE_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_PG_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_PI_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_PS_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_gam_in_biomass[calb_bm_alloc_TG_16_0_18_1_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_fast_growth_default[calb_bm_alloc_CL_16_0_18_1_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_fast_growth_default[calb_bm_alloc_PA_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_fast_growth_default[calb_bm_alloc_PG_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_fast_growth_default[calb_bm_alloc_PS_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_biomass_irv781__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_CL_16_0_18_1_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_DG_16_0_18_1__c]
+Writing snapshot report to '/mnt/fabb0776-b8da-464a-8326-3bb7ca279732/mengya/my_pangenome/results/pangenome_relaxed_80/347_final_detail_closed_ssGEM_memote/per_model/Calb_GCA_020027055_ssGEM/memote_snapshot.html'.
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_MG_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_PA_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_PC_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_PE_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_PG_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_PI_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_PS_16_0_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_biomass.py::test_essential_precursors_not_in_biomass[calb_bm_alloc_TG_16_0_18_1_18_1__c]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_stoichiometric_consistency
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_unconserved_metabolites
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_inconsistent_min_stoichiometry
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM3]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM63]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM51]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM121]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM423]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM21]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_detect_energy_generating_cycles[MNXM89557]
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_reaction_charge_balance
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_reaction_mass_balance
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_blocked_reactions
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_find_stoichiometrically_balanced_cycles
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_find_orphans
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_find_deadends
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_find_metabolites_not_produced_with_open_bounds
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_find_metabolites_not_consumed_with_open_bounds
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_consistency.py::test_find_reactions_unbounded_flux_default_condition
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_metabolite_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_reaction_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_gene_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_metabolic_reaction_specific_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_transport_reaction_specific_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_metabolite_specific_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_gene_specific_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_exchange_specific_sbo_presence
+FAILED ../../../../home/worker021/miniconda3/envs/py39/lib/python3.9/site-packages/memote/suite/tests/test_sbo.py::test_demand_specific_sbo_presence
+===== 119 failed, 109 passed, 9 skipped, 16 warnings in 1707.48s (0:28:27) =====
+[DONE] MEMOTE summary: /mnt/fabb0776-b8da-464a-8326-3bb7ca279732/mengya/my_pangenome/results/pangenome_relaxed_80/347_final_detail_closed_ssGEM_memote/per_model/Calb_GCA_020027055_ssGEM/memote_summary.tsv
